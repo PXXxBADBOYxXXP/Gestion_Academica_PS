@@ -41,7 +41,10 @@ Editar curso AA:
 http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/editarCursoAA/IDMONGODB
 Eliminar curso AA:
 http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/eliminarCursoAA/IDMONGODB
-
+Registrar usuarios
+http://127.0.0.1:3001/sistemaGestionAcademica/v1/auth/registrarUsuario
+Login
+http://127.0.0.1:3001/sistemaGestionAcademica/v1/auth/login
  */
 const routes = (app) =>{
     app.use("/sistemaGestionAcademica/v1/student", studentroutes)
