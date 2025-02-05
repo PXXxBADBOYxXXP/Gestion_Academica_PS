@@ -1,11 +1,17 @@
 import { Router } from "express";
-import {login} from "./auth.controller.js"
+import {login, registrarUsuario} from "./auth.controller.js"
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { deleteFileOnError } from "../middlewares/delete-file-on-errors.js";
-import { loginValidator } from "../middlewares/validadores.js";
+import { loginValidator, registrarUsuarioValidator } from "../middlewares/validadores.js";
 
 const router = Router()
 
+router.post(
+    "/registrarUsuario",
+    registrarUsuarioValidator,
+    deleteFileOnError,
+    registrarUsuario
+)
 router.post(
     "/login",
     loginValidator,

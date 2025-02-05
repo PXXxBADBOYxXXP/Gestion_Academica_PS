@@ -50,3 +50,11 @@ export const loginValidator = [
     body("password").isLength({min:5}).withMessage("LA CONTRASEÑA DEBE CONTENER AL MENOS 5 CARACTERES"),
     validarCampos
 ]
+
+export const registrarUsuarioValidator = [
+    body("email").not().isEmpty().withMessage("EMAIL IS REQUIRED"),
+    body("username").not().isEmpty().withMessage("USERNAME IS REQUIRED"),
+    body("password").not().isEmpty().withMessage("PASSWORD IS REQUIRED"),
+    body("role").not().isEmpty().withMessage("ROLE IS REQUIRED"),
+    validarCampos
+]
