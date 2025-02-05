@@ -7,6 +7,7 @@ import morgan from "morgan"
 import {dbConnection} from "./mongo.js"
 import studentroutes from "../src/estudiante/student.routes.js"
 import teacherroutes from "../src/maestro/teacher.routes.js"
+import authroutes from "../src/auth/auth.routes.js"
 import apiLimiter from "../src/middlewares/validar-cantidad-peticiones.js"
 
 const middlewares = (app) =>{
@@ -45,6 +46,7 @@ http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/eliminarCursoAA/IDMONGO
 const routes = (app) =>{
     app.use("/sistemaGestionAcademica/v1/student", studentroutes)
     app.use("/sistemaGestionAcademica/v1/teacher", teacherroutes)
+    app.use("/sistemaGestionAcademica/v1/auth", authroutes)
 }
 
 const conectarDB = async () =>{

@@ -43,3 +43,10 @@ export const registrarCursosValidator = [
     body("cursos").not().isEmpty().withMessage("CURSOS IS REQUIRED"),
     validarCampos
 ]
+
+export const loginValidator = [
+    body("email").optional().isEmail().withMessage("INVALID EMAIL"),
+    body("username").optional().isString().withMessage("IVALID USERNAME"),
+    body("password").isLength({min:5}).withMessage("LA CONTRASEÑA DEBE CONTENER AL MENOS 5 CARACTERES"),
+    validarCampos
+]
