@@ -47,10 +47,9 @@ export const login = async (req, res) =>{
         }
         const token = await generateJWT(user.id)
         return res.status(200).json({
-            message: "LOGIN SUCCESFUL",
+            message: "LOGIN COMPLETADO",
             userDetails: {
-                token: token,
-                profilePicture: user.profilePicture
+                token: token
             }
         })
     }catch(err){
