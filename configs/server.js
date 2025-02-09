@@ -20,31 +20,39 @@ const middlewares = (app) =>{
 }
 //RUTAS GENERALES DE LA API
 /**
- * Validación máximo 3 cursos: POST
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/registerStudent
+ * Validación máximo 3 cursos: 
+ * METODO: POST
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/registerStudent
 Validación materia duplicada
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/asignaturaStudent/IDDEMONGODB
-Lista de cursos: GET
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/
-Editar perfil: PUT http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/editProfile/IDDEMONGODB
-Eliminar perfil: DELETE
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/deleteProfile/IDDEMONGODB
-Crear cursos: POST
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/registerCourses
-Editar cursos: PUT
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/actualizarCursos/67a297795c937b27534e1dc5
+METODO: PUT
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/asignaturaStudent/IDDEMONGODB
+Lista de cursos: 
+METODO:GET
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/
+Editar perfil: 
+METODO: PUT 
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/editProfile/IDDEMONGODB
+Eliminar perfil: 
+METODO: DELETE
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/student/deleteProfile/IDDEMONGODB
+Crear cursos: 
+METODO: POST
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/registerCourses
+Editar cursos: 
+METODO: PUT
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/actualizarCursos/67a297795c937b27534e1dc5
 Eliminar cursos: 
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/eliminarCursos/IDDEMONGODB
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/eliminarCursos/IDDEMONGODB
 Visualizar cursos:
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/visualizar
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/visualizar
 Editar curso AA:
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/editarCursoAA/IDMONGODB
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/editarCursoAA/IDMONGODB
 Eliminar curso AA:
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/eliminarCursoAA/IDMONGODB
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/teacher/eliminarCursoAA/IDMONGODB
 Registrar usuarios
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/auth/registrarUsuario
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/auth/registrarUsuario
 Login
-http://127.0.0.1:3001/sistemaGestionAcademica/v1/auth/login
+URL DEL ENDPOINT: http://127.0.0.1:3001/sistemaGestionAcademica/v1/auth/login
  */
 const routes = (app) =>{
     app.use("/sistemaGestionAcademica/v1/student", studentroutes)

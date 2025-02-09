@@ -3,6 +3,7 @@ import { studentExists } from "../helpers/db-validators.js";
 import { validarCampos } from "./validar-campos.js";
 import { deleteFileOnError } from "./delete-file-on-errors.js";
 
+//VALIDACION PARA REGISRAR ESTUDIANTES
 export const registerStudentValidator = [
     body("name").not().isEmpty().withMessage("ESTUDIANTE ES REQUERIDO"),
     body("asignatura").not().isEmpty().withMessage("ASIGNATURA ES REQUERIDA")
@@ -16,6 +17,7 @@ export const registerStudentValidator = [
     validarCampos
 ]
 
+//VALIDACION PARA QUE UN ESTUDIANTE NO SE ASIGNE A UN CURSO YA ASIGNADO
 export const asignacion1CursoStudentValidator = [
     body("name").not().isEmpty().withMessage("ESTUDIANTE ES REQUERIDO"),
     body("asignatura").not().isEmpty().withMessage("ASIGNATURA ES REQUERIDA")
@@ -30,6 +32,7 @@ export const asignacion1CursoStudentValidator = [
     validarCampos
 ]
 
+//VALIDACION PARA QUE EL ESTUDIANTE ELIMINE EL PERFIL
 export const eliminarPerfilEstudianteValidator = [
     check("uid").isMongoId().withMessage("NO ES UN ID VALIDO"),
     check("uid").custom(studentExists),
@@ -37,6 +40,7 @@ export const eliminarPerfilEstudianteValidator = [
     deleteFileOnError
 ]
 
+//VALIDACION PARA REGISTRAR CURSOS
 export const registrarCursosValidator = [
     body("name").not().isEmpty().withMessage("TEACHER IS REQUIRED"),
     body("password").not().isEmpty().withMessage("PASSWORD IS REQUIRED"),
@@ -44,6 +48,7 @@ export const registrarCursosValidator = [
     validarCampos
 ]
 
+//VALIDACION DEL INICIO DE SESION
 export const loginValidator = [
     body("email").optional().isEmail().withMessage("INVALID EMAIL"),
     body("username").optional().isString().withMessage("IVALID USERNAME"),
@@ -51,6 +56,7 @@ export const loginValidator = [
     validarCampos
 ]
 
+//VALIDACION PARA REGISTRAR USUARIOS
 export const registrarUsuarioValidator = [
     body("email").not().isEmpty().withMessage("EMAIL IS REQUIRED"),
     body("username").not().isEmpty().withMessage("USERNAME IS REQUIRED"),

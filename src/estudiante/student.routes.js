@@ -24,4 +24,5 @@ router.get("/", getStudents)
 router.put("/editProfile/:uid", actualizarPerfilEstuiante)
 //ELIMINAR PERFIL
 router.delete("/deleteProfile/:uid", eliminarPerfilEstudianteValidator, eliminarPerfilEstudiante)
+
 export default router

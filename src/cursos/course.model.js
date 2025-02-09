@@ -6,3 +6,5 @@ const courseSchema = Schema({
         required: [true, 'El nombre del curso es obligatorio']
     }     
 })
+
+export default model("Course", courseSchema)
