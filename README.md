@@ -15,7 +15,7 @@ JWT_SECRET=<tu_secreto_jwt>
 
 ## ENDPOINTS DE LA API
 
-### AUTENCICACIÓN
+### AUTENTICACIÓN
 
 - **Registrar usuarios**
   - **URL:** `/sistemaGestionAcademica/v1/auth/registrarUsuario`
@@ -23,10 +23,10 @@ JWT_SECRET=<tu_secreto_jwt>
   - **Cuerpo:**
     ```json
     {
-  "email":"string",
-  "username":"string",
-  "password":"string",
-  "role":"string"
+    "email":"string",
+    "username":"string",
+    "password":"string",
+    "role":"string"
     }
     ```
 
@@ -36,9 +36,9 @@ JWT_SECRET=<tu_secreto_jwt>
   - **Cuerpo:**
     ```json
     {
-     "email":"string",
-     "username":"string",
-    "password":"string"
+      "email":"string",
+      "username":"string",
+      "password":"string"
     }
     ```
 
@@ -50,9 +50,9 @@ JWT_SECRET=<tu_secreto_jwt>
  - **Cuerpo:**
     ```json
     {
-  "name":"string",
-  "password":"string",
-  "asignatura":["string", "string", "string"]
+      "name":"string",
+      "password":"string",
+      "asignatura":["string", "string", "string"]
     }
     ```
 
@@ -62,8 +62,8 @@ JWT_SECRET=<tu_secreto_jwt>
   - **Cuerpo:**
     ```json
     {
-   "name":"string",
-    "asignatura":["string"]
+       "name":"string",
+       "asignatura":["string"]
     }
     ```
 
@@ -121,17 +121,16 @@ JWT_SECRET=<tu_secreto_jwt>
   - **Método:** `GET`
 
  - **EDITAR CURSOS ALUMNOS ASIGNADOS**
-  - **URL:** `/sistemaGestionAcademica/v1/teacher/editarCursoAA/:uid`
-  - **Método:** `PUT`
-   - **Cuerpo:**
-    ```json
-    {
-  "name":"string",
-  "password":"string",
-  "alumnosAsignados":"string, string, string",
-  "cursos":["string", "string"]
- }
-    ```
+ - **URL:** `/sistemaGestionAcademica/v1/teacher/editarCursoAA/:uid`
+- **Método:** `PUT`
+- **Cuerpo:**
+  ```json
+  {
+    "name": "string",
+    "password": "string",
+    "alumnosAsignados": "string, string, string",
+    "cursos": ["string", "string"]
+  }
 
  - **ELIMINAR CURSOS ALUMNOS ASIGNADOS**
   - **URL:** `/sistemaGestionAcademica/v1/teacher/eliminarCursoAA/:uid`
